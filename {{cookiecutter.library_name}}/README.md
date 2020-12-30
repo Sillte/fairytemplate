@@ -57,3 +57,12 @@ Generally speaking, tests are the most crucial, coding format and type-annotatio
     - Configuration: `mypy.ini`
     - Purpose: To check type annotation.
     - Comment: It maybe a little bit hard to eliminate error completely.  
+
+#### Functions related to development  
+
+```
+```
+
+* `git`
+* `vim` 
+
