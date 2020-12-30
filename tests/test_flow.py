@@ -1,5 +1,14 @@
-"""
+"""Workflow test for `fairytemplate`.  
+
 Requirement: `git`. 
+
+Here, we'd like to confirm that 
+the initialized library accepts basic operations
+such as `pip install .`, `pytest`.  
+
+If this test passes, normal usage is assured to be correct.
+(Though, only normal cases are considered!)
+
 """
 
 import pytest
@@ -107,11 +116,13 @@ def test_flow(repo_folder, output_folder, env_folder):
 
     # mypy.
     mypy_path = env_handler.mypy
-    subprocess.run(f"{mypy_path} .", check=True, cwd=library_folder)
+    subprocess.run(f"{mypy_path} .", cwd=library_folder)
 
     # black.
     black_path = env_handler.black
-    subprocess.run(f"{black_path} .", check=True, cwd=library_folder)
+    subprocess.run(f"{black_path} .", cwd=library_folder)
+
+    subprocess.run(f'{python_path} {library_folder / "ready.py"}', shell=True)
 
 if __name__ == "__main__":
     assert pytest.__version__ >= "6.0", "pyproject.toml"

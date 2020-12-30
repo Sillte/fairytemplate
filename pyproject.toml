@@ -1,9 +1,12 @@
 [build-system]
 requires = ["setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4"]
 
+[tool.setuptools_scm]
+write_to = "src/{{cookiecutter.library_name}}/version.py"
+
 [tool.pytest.ini_options]
 minversion = "6.0"
-addopts = "-ra -q --cov htmlcov"
+addopts = "-ra -q --verbose --capture=no"
 testpaths =  ["tests"]
-norecursedirs = ["_test*"]   # To suppress the tests of `fairytool` template tests.
-
+# To suppress the tests of `fairytool` template tests.
+norecursedirs = ["_test*", "__venv__"]
