@@ -4,21 +4,48 @@
 
 Your motivation is described here.   
 
-### Install
+### Install Procedure
 
-Python3.8+?  
+#### Pre-requirement
+
+- Python3.8+?   
+- git  
+- vim 
 
 ```bat
 pip install -e .
 ```
 
-### Getting started.   
+### Getting started for users.  
 
 [tests/test_sample.py](./tests/test_sample.py) is the most basic and fundamental idea of the library is presented, 
 so first of all, check this file.    
 
 
-## For development
+## Development procedures  
+
+## Getting started from `git`.    
+
+We assumes that you `git clone` this repository.  
+
+1. Execute `python ready.py` 
+    - You can get a virtual environment `venv` with which this library is installed. 
+
+
+## Getting started from `cookiecutter`.   
+
+1. Fulfill [./LICENSE](./LICENSE).
+    - The template license is [MIT](https://opensource.org/licenses/MIT) .  
+    - **Change** the year from which the project starts and Author's name.    
+
+2. Check and revise `README.md`  with knowledge at the present time. 
+    - Purpose
+    - Install procedure 
+
+3. Perform `git init`.  
+
+Then, basic preparation for development is completed.  
+
 
 #### Execution of test.
 
@@ -58,11 +85,10 @@ Generally speaking, tests are the most crucial, coding format and type-annotatio
     - Purpose: To check type annotation.
     - Comment: It maybe a little bit hard to eliminate error completely.  
 
-#### Functions related to development  
 
-```
-```
+#### Functions related to development  
 
 * `git`
 * `vim` 
+
 
