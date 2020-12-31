@@ -18,13 +18,14 @@ def main(clear=True):
     # OS dependency. 
     bin_path = _venv_folder / "Scripts"
 
-    # Since `setuptools_scm` is used, so `git` is mandatory. 
-    if not (_this_folder / ".git").exists():
-        _run("git init")
     env = dict(os.environ)
     env["PATH"] = f"{bin_path};{env['PATH']}"
     def _run(*args, shell=True, **kwargs):
+        nonlocal env
         return subprocess.run(*args, shell=True, env=env, **kwargs)
+    # Since `setuptools_scm` is used, so `git` is mandatory. 
+    if not (_this_folder / ".git").exists():
+        _run("git init")
     _run("python -m pip install -U pip", shell=True)
     _run(f"pip install -e .", check=True)
 

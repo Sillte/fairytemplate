@@ -4,6 +4,7 @@
 
 Your motivation is described here.   
 
+
 ### Install Procedure
 
 #### Pre-requirement
@@ -46,12 +47,11 @@ We assumes that you `git clone` this repository.
 
 Then, basic preparation for development is completed.  
 
-
 #### Execution of test.
 
 * Execution of test: `pytest`
 * Code formatter: `black`, `flake8`. 
-* Dependency: See `setup.cfg`. 
+* Library dependencies: See `setup.cfg`. 
 
 #### Functions related to development  
 
@@ -84,7 +84,6 @@ Generally speaking, tests are the most crucial, coding format and type-annotatio
     - Configuration: `mypy.ini`
     - Purpose: To check type annotation.
     - Comment: It maybe a little bit hard to eliminate error completely.  
-
 
 #### Functions related to development  
 
