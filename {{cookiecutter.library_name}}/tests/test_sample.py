@@ -6,6 +6,7 @@
 Fairies hope this file to be one of bridges between developers and users.
 """
 
+import pytest
 import {{cookiecutter.library_name}}  
 
 
